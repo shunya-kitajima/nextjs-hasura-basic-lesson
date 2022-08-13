@@ -43,6 +43,9 @@ const LocalStateA: React.FC = () => {
           Add new state
         </button>
       </form>
+      <Link href="/local-state-b">
+        <a>Next</a>
+      </Link>
     </>
   )
 }
