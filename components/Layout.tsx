@@ -81,7 +81,7 @@ const Layout: React.FC<Props> = ({ children, title = 'Welcom to Nextjs' }) => {
         >
           Powered by{' '}
           <span className="flex items-center">
-            <Image src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
