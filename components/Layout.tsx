@@ -31,7 +31,7 @@ const Layout: React.FC<Props> = ({ children, title = 'Welcom to Nextjs' }) => {
                   data-testid="makevar-nav"
                   className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
                 >
-                  makevar
+                  makeVar
                 </a>
               </Link>
               <Link href="/hasura-main">
@@ -63,7 +63,7 @@ const Layout: React.FC<Props> = ({ children, title = 'Welcom to Nextjs' }) => {
                   data-testid="memo-nav"
                   className="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded"
                 >
-                  customHook+memo
+                  custom hook + memo
                 </a>
               </Link>
             </div>
