@@ -6,7 +6,26 @@ import { GetUsersQuery } from '../types/generated/graphql'
 import Layout from '../components/Layout'
 
 const FetchMain: React.FC = () => {
-  return <div>hasura-main</div>
+  const { data, error } = useQuery<GetUsersQuery>(GET_USERS)
+
+  if (error) {
+    ;<Layout title="Hasura fetchPolicy">
+      <p>Error: {error.message}</p>
+    </Layout>
+  }
+
+  return (
+    <Layout title="Hasura fetchPolicy">
+      <p className="mb-6 font-bold">Hasura main page</p>
+      {data?.users.map((user) => {
+        return (
+          <p className="my-1" key={user.id}>
+            {user.name}
+          </p>
+        )
+      })}
+    </Layout>
+  )
 }
 
 export default FetchMain
