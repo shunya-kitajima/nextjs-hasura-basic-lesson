@@ -24,6 +24,9 @@ const FetchMain: React.FC = () => {
           </p>
         )
       })}
+      <Link href="/hasura-sub">
+        <a className="mt-6">Next</a>
+      </Link>
     </Layout>
   )
 }
