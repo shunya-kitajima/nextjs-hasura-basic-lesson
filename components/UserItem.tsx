@@ -19,7 +19,34 @@ const Useritem: React.FC<Props> = ({
   delete_users_by_pk,
   setEditedUser,
 }) => {
-  return <div></div>
+  return (
+    <div className="my-1">
+      <p className="mr-2">{user.name}</p>
+      <p className="mr-2">{user.created_at}</p>
+      <button
+        className="mr-1 py-1 px-3 text-white bg-green-600 hover:bg-green-700 rounded-2xl focus:outline-none"
+        data-testid={`edit-${user.id}`}
+        onClick={() => {
+          setEditedUser(user)
+        }}
+      >
+        Edit
+      </button>
+      <button
+        className="py-1 px-3 text-white bg-green-600 hover:bg-green-700 rounded-2xl focus:outline-none"
+        data-testid={`delete-${user.id}`}
+        onClick={async () => {
+          await delete_users_by_pk({
+            variables: {
+              id: user.id,
+            },
+          })
+        }}
+      >
+        Delete
+      </button>
+    </div>
+  )
 }
 
 export default Useritem
