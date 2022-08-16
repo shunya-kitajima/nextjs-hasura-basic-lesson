@@ -14,7 +14,7 @@ interface Props {
   >
 }
 
-const Useritem: React.FC<Props> = ({
+const UserItem: React.FC<Props> = ({
   user,
   delete_users_by_pk,
   setEditedUser,
@@ -50,4 +50,4 @@ const Useritem: React.FC<Props> = ({
   )
 }
 
-export default Useritem
+export default UserItem
