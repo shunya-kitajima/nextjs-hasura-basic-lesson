@@ -84,10 +84,25 @@ const HasuraCRUD: React.FC = () => {
   return (
     <Layout title="HasuraCRUD">
       <p className="mb-3 font-bold">Hasura CRUD</p>
-      <form
-        className="flex flex-col justify-center"
-        onSubmit={handleSubmit}
-      ></form>
+      <form className="flex flex-col justify-center" onSubmit={handleSubmit}>
+        <input
+          className="px-3 py2 border border-gray-300"
+          placeholder="New user ?"
+          type="text"
+          value={editedUser.name}
+          onChange={(e) =>
+            setEditedUser({ ...editedUser, name: e.target.value })
+          }
+        />
+        <button
+          disabled={!editedUser.name}
+          className="disabled:opacity-40 my-3 py-1 px-3 text-white bg-indigo-600 hover:bg-indigo-700 rounded-2xl focus:outline-none"
+          data-testid="new"
+          type="submit"
+        >
+          {editedUser.id ? 'Update' : 'Create'}
+        </button>
+      </form>
     </Layout>
   )
 }
