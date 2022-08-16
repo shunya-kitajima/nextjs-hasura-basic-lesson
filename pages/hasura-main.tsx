@@ -14,9 +14,11 @@ const FetchMain: React.FC = () => {
   })
 
   if (error) {
-    ;<Layout title="Hasura fetchPolicy">
-      <p>Error: {error.message}</p>
-    </Layout>
+    return (
+      <Layout title="Hasura fetchPolicy">
+        <p>Error: {error.message}</p>
+      </Layout>
+    )
   }
 
   return (

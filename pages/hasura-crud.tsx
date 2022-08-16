@@ -76,9 +76,11 @@ const HasuraCRUD: React.FC = () => {
   }
 
   if (error) {
-    ;<Layout title="HasuraCRUD">
-      <p>Error: {error.message}</p>
-    </Layout>
+    return (
+      <Layout title="HasuraCRUD">
+        <p>Error: {error.message}</p>
+      </Layout>
+    )
   }
 
   return (
