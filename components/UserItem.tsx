@@ -50,4 +50,6 @@ const UserItem: React.FC<Props> = ({
   )
 }
 
-export const UserItemMemo = memo(UserItem)
+const UserItemMemo = memo(UserItem)
+
+export default UserItemMemo
