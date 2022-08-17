@@ -13,7 +13,7 @@ import {
   UpdateUserMutation,
 } from '../types/generated/graphql'
 import Layout from '../components/Layout'
-import { UserItemMemo } from '../components/Useritem'
+import UserItemMemo from '../components/UserItem'
 
 const HasuraCRUD: React.FC = () => {
   const [editedUser, setEditedUser] = useState({ id: '', name: '' })
