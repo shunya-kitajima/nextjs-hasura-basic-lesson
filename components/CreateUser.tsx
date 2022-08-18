@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCreateForm } from '../hooks/useCreateForm'
-import Child from './Child'
+import ChildMemo from './Child'
 
 const CreateUser: React.FC = () => {
   const {
@@ -44,7 +44,7 @@ const CreateUser: React.FC = () => {
             Submit
           </button>
         </form>
-        <Child printMsg={printMsg} />
+        <ChildMemo printMsg={printMsg} />
       </div>
     </>
   )
