@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCreateForm } from '../hooks/useCreateForm'
+import Child from './Child'
 
 const CreateUser: React.FC = () => {
   const {
@@ -43,6 +44,7 @@ const CreateUser: React.FC = () => {
             Submit
           </button>
         </form>
+        <Child printMsg={printMsg} />
       </div>
     </>
   )
