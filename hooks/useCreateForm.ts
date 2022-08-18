@@ -41,7 +41,7 @@ export const useCreateForm = () => {
       }
       setUsername('')
     },
-    [username]
+    [insert_users_one, username]
   )
   return {
     text,
