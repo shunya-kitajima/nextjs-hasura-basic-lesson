@@ -2,9 +2,10 @@ import React, { ChangeEvent, FormEvent, memo } from 'react'
 
 interface Props {
   printMsg: () => void
+  handleSubmit: (e: ChangeEvent<HTMLFormElement>) => Promise<void>
 }
 
-const Child: React.FC<Props> = ({ printMsg }) => {
+const Child: React.FC<Props> = ({ printMsg, handleSubmit }) => {
   return (
     <>
       {console.log('Child rendered')}

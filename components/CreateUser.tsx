@@ -44,7 +44,7 @@ const CreateUser: React.FC = () => {
             Submit
           </button>
         </form>
-        <ChildMemo printMsg={printMsg} />
+        <ChildMemo printMsg={printMsg} handleSubmit={handleSubmit} />
       </div>
     </>
   )
