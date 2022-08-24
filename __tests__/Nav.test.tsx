@@ -1,8 +1,8 @@
 /**
  * @jest-environment jsdom
  */
-import { render, screen, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
+import { render, screen, cleanup } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { getPage, initTestHelpers } from 'next-page-tester'
 import { setupServer } from 'msw/node'
@@ -30,5 +30,7 @@ describe('Navigation Test Cases', () => {
     })
     render(page)
     expect(await screen.findByText('Next.js + GraphQL')).toBeInTheDocument()
+    userEvent.click(screen.getByTestId('makevar-nav'))
+    expect(await screen.findByText('makeVar')).toBeInTheDocument()
   })
 })
