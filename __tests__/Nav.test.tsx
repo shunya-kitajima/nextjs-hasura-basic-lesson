@@ -42,5 +42,7 @@ describe('Navigation Test Cases', () => {
     expect(
       await screen.findByText('Custom Hook + useCallback + memo')
     ).toBeInTheDocument()
+    userEvent.click(screen.getByTestId('home-nav'))
+    expect(await screen.findByText('Next.js + GraphQL')).toBeInTheDocument()
   })
 })
