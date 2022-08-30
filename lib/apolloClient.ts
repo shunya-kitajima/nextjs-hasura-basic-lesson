@@ -6,8 +6,6 @@ import {
 } from '@apollo/client'
 import 'cross-fetch/polyfill'
 
-export const APOLLI_STATE_PROP_NAME = '__APLLO_STATE__'
-
 let apolloClient: ApolloClient<NormalizedCacheObject> | undefined
 
 const createApolloClient = () => {
