@@ -15,6 +15,9 @@ const createApolloClient = () => {
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
       uri: 'https://hasura-basic-kita.hasura.app/v1/graphql',
+      headers: {
+        'x-hasura-admin-secret': process.env.NEXT_PUBLIC_HASURA_KEY,
+      },
     }),
     cache: new InMemoryCache(),
   })
